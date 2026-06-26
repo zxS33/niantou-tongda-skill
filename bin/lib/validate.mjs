@@ -16,6 +16,7 @@ const requiredFiles = [
   ".hermes/INSTALL.md",
   ".nanobot/INSTALL.md",
   "assets/logo_main.svg",
+  "assets/niantou-tongda-hero.png",
   "assets/social-card.svg",
   "bin/niantou-tongda-skill.mjs",
   "bin/lib/detect-platform.mjs",

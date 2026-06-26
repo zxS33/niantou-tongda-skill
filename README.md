@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/logo_main.svg" width="640" alt="念头通达 Skill"/>
+  <img src="./assets/niantou-tongda-hero.png" width="980" alt="念头通达 Skill"/>
 </p>
 
 # 念头通达 Skill

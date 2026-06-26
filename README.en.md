@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/logo_main.svg" width="640" alt="Niantou Tongda Skill"/>
+  <img src="./assets/niantou-tongda-hero.png" width="980" alt="Niantou Tongda Skill"/>
 </p>
 
 # Niantou Tongda Skill
