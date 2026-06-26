@@ -60,6 +60,7 @@ const requiredFiles = [
   "skills/engineering-execution/quality-gates-reference.md",
   "skills/hanli-long-game/original-texts.md",
   "skills/hanli-long-game/long-game-checklist.md",
+  "skills/hanli-long-game/hanli-practice-map.md",
   "skills/closure-review/original-texts.md",
   "skills/closure-review/review-checklist.md",
   "skills/tongda-workflows/original-texts.md",

@@ -8,6 +8,8 @@ Action-oriented clarity and verified delivery skills for AI agents. The project 
 
 The project is inspired by Daoist self-cultivation language and public online discussion around cultivation fiction, but it is not affiliated with any novel, animation, author, publisher, or rights holder.
 
+For users who know cultivation fiction, the cultural anchor is the Han Li-style version of 念头通达: do not confuse short-term release with clarity, do not worship tools, preserve backup paths, act when evidence is enough, and close the loop once the cost is accepted.
+
 ## Skills
 
 ```text
