@@ -36,6 +36,7 @@ const requiredFiles = [
   "skills/benxin-decision/SKILL.md",
   "skills/wuzhu-action/SKILL.md",
   "skills/pojing-breakthrough/SKILL.md",
+  "skills/engineering-execution/SKILL.md",
   "skills/hanli-long-game/SKILL.md",
   "skills/closure-review/SKILL.md",
   "skills/tongda-workflows/SKILL.md",
@@ -54,24 +55,14 @@ const requiredFiles = [
   "skills/wuzhu-action/action-patterns-reference.md",
   "skills/pojing-breakthrough/original-texts.md",
   "skills/pojing-breakthrough/probe-patterns-reference.md",
+  "skills/engineering-execution/original-texts.md",
+  "skills/engineering-execution/execution-playbooks.md",
+  "skills/engineering-execution/quality-gates-reference.md",
   "skills/hanli-long-game/original-texts.md",
   "skills/hanli-long-game/long-game-checklist.md",
   "skills/closure-review/original-texts.md",
   "skills/closure-review/review-checklist.md",
   "skills/tongda-workflows/original-texts.md",
-];
-
-const commands = [
-  "niantou-tongda",
-  "xuanlan-mirror",
-  "heart-knot-diagnosis",
-  "control-boundary",
-  "benxin-decision",
-  "wuzhu-action",
-  "pojing-breakthrough",
-  "hanli-long-game",
-  "closure-review",
-  "tongda-workflows",
 ];
 
 async function exists(root, relativePath) {
@@ -149,11 +140,10 @@ export async function runValidation({ repoRoot, stdout = process.stdout, stderr 
   }
 
   stdout.write("Validating frontmatter...\n");
-  const frontmatterFiles = [
-    ...(await walk(root, "skills", (file) => path.basename(file) === "SKILL.md")),
-    ...(await walk(root, "agents", (file) => file.endsWith(".md"))),
-    ...(await walk(root, "commands", (file) => file.endsWith(".md"))),
-  ];
+  const skillFiles = await walk(root, "skills", (file) => path.basename(file) === "SKILL.md");
+  const agentFiles = await walk(root, "agents", (file) => file.endsWith(".md"));
+  const commandFiles = await walk(root, "commands", (file) => file.endsWith(".md"));
+  const frontmatterFiles = [...skillFiles, ...agentFiles, ...commandFiles];
   for (const file of frontmatterFiles) {
     try {
       parseFrontmatter(await readFile(path.join(root, file), "utf8"), file);
@@ -163,9 +153,20 @@ export async function runValidation({ repoRoot, stdout = process.stdout, stderr 
   }
 
   stdout.write("Validating command coverage...\n");
-  for (const command of commands) {
-    if (!(await exists(root, `commands/${command}.md`))) {
-      errors.push(`Missing command file: commands/${command}.md`);
+  const skillNames = skillFiles.map((file) => path.basename(path.dirname(file))).sort();
+  const skillNameSet = new Set(skillNames);
+  for (const skillName of skillNames) {
+    if (!(await exists(root, `commands/${skillName}.md`))) {
+      errors.push(`Missing command file: commands/${skillName}.md`);
+    }
+    if (!(await exists(root, `skills/${skillName}/agents/openai.yaml`))) {
+      errors.push(`Missing agents metadata: skills/${skillName}/agents/openai.yaml`);
+    }
+  }
+  for (const commandFile of commandFiles) {
+    const commandName = path.basename(commandFile, ".md");
+    if (!skillNameSet.has(commandName)) {
+      errors.push(`Command has no matching skill: ${commandFile}`);
     }
   }
 

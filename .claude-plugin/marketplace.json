@@ -5,14 +5,14 @@
     "url": "https://github.com/zxS33"
   },
   "metadata": {
-    "description": "把念头通达转化为 AI Agent 可执行的工程心法与决断工作流",
+    "description": "把念头通达转化为 AI Agent 可执行的工程心法、决断工作流与验证交付契约",
     "version": "0.1.0"
   },
   "plugins": [
     {
       "name": "niantou-tongda-skill",
       "source": "./",
-      "description": "Actionable methodology skills + commands + session hook",
+      "description": "Actionable methodology, verified delivery skills, commands, and session hook",
       "version": "0.1.0",
       "category": "productivity",
       "keywords": [
@@ -21,6 +21,7 @@
         "skill",
         "decision-making",
         "software-engineering",
+        "verified-delivery",
         "chinese"
       ]
     }

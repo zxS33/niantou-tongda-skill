@@ -12,4 +12,5 @@ npx niantou-tongda-skill install --target opencode --scope user
 /niantou-tongda
 /tongda-workflows
 /pojing-breakthrough
+/engineering-execution
 ```

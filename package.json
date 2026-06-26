@@ -1,7 +1,7 @@
 {
   "name": "niantou-tongda-skill",
   "version": "0.1.0",
-  "description": "把“念头通达”转化为 AI Agent 可执行的修心、决断与反内耗 Skills",
+  "description": "把“念头通达”转化为 AI Agent 可执行的修心、决断、工程交付与反内耗 Skills",
   "author": "zxS33 <zx1467506288@outlook.com>",
   "license": "MIT",
   "type": "module",
@@ -42,6 +42,7 @@
     "anti-rumination",
     "decision-making",
     "software-engineering",
+    "verified-delivery",
     "productivity",
     "chinese"
   ]

@@ -14,8 +14,10 @@ cp -R skills/* "${CODEX_HOME:-$HOME/.codex}/skills/"
 ## 使用
 
 - 入口 skill：`niantou-tongda`
-- 单项方法：`xuanlan-mirror`、`heart-knot-diagnosis`、`control-boundary`、`benxin-decision`、`wuzhu-action`、`pojing-breakthrough`、`hanli-long-game`、`closure-review`
+- 单项方法：`xuanlan-mirror`、`heart-knot-diagnosis`、`control-boundary`、`benxin-decision`、`wuzhu-action`、`pojing-breakthrough`、`engineering-execution`、`hanli-long-game`、`closure-review`
 - 组合流程：`tongda-workflows`
+
+写代码、改文档、做设计或办公交付时，优先让入口路由到 `engineering-execution`，避免只停在分析表格。
 
 ## 验证
 

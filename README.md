@@ -16,7 +16,7 @@
 - 把“爽一下”误当成“真的通达”。
 - 被 review、报错、需求变化、设计争议带偏心神。
 - 把一个方案、一段代码、一个设计稿执著成自我价值。
-- 给完建议后，没有下一步、验证信号和停止内耗规则。
+- 给完建议后，没有产物、验证信号和停止内耗规则。
 
 `niantou-tongda-skill` 的目标是让 agent 不止会说“放下”，而是能帮助用户和自己在项目、代码、设计、办公和复杂关系里看清、取舍、行动、验证、收念。
 
@@ -30,6 +30,7 @@ control-boundary      可控边界：划分控制圈、影响圈、观察圈
 benxin-decision       本心决断：按价值、代价、边界和验证做选择
 wuzhu-action          无住行动：在不确定和不完美中交付最小反馈
 pojing-breakthrough   破境攻关：为顽固瓶颈设计最小探针
+engineering-execution 工程执行：把澄清和决断落到代码、文档、设计或办公交付
 hanli-long-game       韩立长线：保留后路、证据、复利和选择权
 closure-review        收念闭环：行动后复盘并停止重复内耗
 tongda-workflows      工作流：组合多个 skill 处理复杂困境
@@ -37,7 +38,7 @@ tongda-workflows      工作流：组合多个 skill 处理复杂困境
 
 ## 核心原则
 
-念头通达 = 事实澄明 + 心结可见 + 边界清楚 + 决断干净 + 行动不执 + 瓶颈可破 + 长线不败 + 复盘收束。
+念头通达 = 事实澄明 + 心结可见 + 边界清楚 + 决断干净 + 行动不执 + 瓶颈可破 + 交付可验 + 长线不败 + 复盘收束。
 
 它不是压抑情绪，也不是鼓励冲动；不是有仇必报，也不是委屈求全。通达的标志是：做完选择后，用户知道自己为什么这样做，愿意承担代价，并能把注意力收回到行动。
 
@@ -88,6 +89,7 @@ node ./bin/niantou-tongda-skill.mjs install --target all --scope user
 /benxin-decision
 /wuzhu-action
 /pojing-breakthrough
+/engineering-execution
 /hanli-long-game
 /closure-review
 /tongda-workflows
@@ -129,6 +131,7 @@ niantou-tongda-skill/
 │   ├── benxin-decision/
 │   ├── wuzhu-action/
 │   ├── pojing-breakthrough/
+│   ├── engineering-execution/
 │   ├── hanli-long-game/
 │   ├── closure-review/
 │   └── tongda-workflows/

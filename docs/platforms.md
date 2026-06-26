@@ -27,4 +27,5 @@ npx niantou-tongda-skill validate
 
 - `skills/niantou-tongda/SKILL.md`
 - `skills/tongda-workflows/SKILL.md`
+- `skills/engineering-execution/SKILL.md`
 - `commands/*.md`

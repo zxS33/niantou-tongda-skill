@@ -39,6 +39,10 @@ test("codex installs skills into Codex skills directory", async () => {
       await readInstalled(context, path.join(".codex", "skills", "niantou-tongda", "SKILL.md")),
       /name:\s*niantou-tongda/
     );
+    assert.match(
+      await readInstalled(context, path.join(".codex", "skills", "engineering-execution", "SKILL.md")),
+      /name:\s*engineering-execution/
+    );
   });
 });
 
@@ -61,6 +65,10 @@ test("opencode installs skills and commands", async () => {
     assert.match(
       await readInstalled(context, path.join(".config", "opencode", "commands", "tongda-workflows.md")),
       /name:\s*tongda-workflows/
+    );
+    assert.match(
+      await readInstalled(context, path.join(".config", "opencode", "commands", "engineering-execution.md")),
+      /name:\s*engineering-execution/
     );
   });
 });

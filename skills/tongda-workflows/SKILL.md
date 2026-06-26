@@ -1,7 +1,7 @@
 ---
 name: tongda-workflows
 description: |
-  通达工作流。Use when complex work needs multiple 念头通达 skills in sequence: debugging, feature delivery, design iteration, product scope decisions, interpersonal conflict, postmortems, creative blocks, or long-horizon strategy. Select a workflow, define handoff data between skills, run the first step, and stop only when there is a verified next action or closure.
+  通达工作流。Use when complex work needs multiple 念头通达 skills in sequence: debugging, feature delivery, design iteration, product scope decisions, interpersonal conflict, postmortems, creative blocks, or long-horizon strategy. Select a workflow, define handoff data between skills, run the first step, and stop only when there is a verified next action, concrete deliverable, or closure.
 ---
 
 # 通达工作流
@@ -13,49 +13,67 @@ description: |
 适用：bug、测试失败、性能瓶颈、构建失败、线上异常。
 
 ```text
-xuanlan-mirror -> pojing-breakthrough -> benxin-decision -> closure-review
+xuanlan-mirror -> pojing-breakthrough -> engineering-execution -> closure-review
 ```
 
 交接：
 - 明镜输出事实、信号、假说和最小验证。
 - 破境输出探针结果和四选一决策。
-- 本心决断决定修复、回滚、降级或升级。
+- 工程执行完成最小负责改动、验证矩阵和风险交代。
 - 收念闭环沉淀原则和残余动作。
 
-终止条件：问题有可验证处理结果，且记录了下次原则。
+终止条件：问题有可验证处理结果，代码或文档已交付，且记录了下次原则。
 
-## Workflow 2：产品/设计迭代通达
+## Workflow 2：工程交付通达
+
+适用：功能开发、重构、文档补齐、测试补齐、办公产物、跨文件交付。
+
+```text
+xuanlan-mirror -> benxin-decision -> engineering-execution -> closure-review
+```
+
+交接：
+- 明镜输出已知事实、约束和未知缺口。
+- 本心决断确定必须守住的质量、范围和可牺牲项。
+- 工程执行侦察仓库或素材，完成最小负责交付并验证。
+- 闭环记录残余风险、后续动作和停止规则。
+
+终止条件：用户可直接使用交付物，且验证证据和残余风险明确。
+
+## Workflow 3：产品/设计迭代通达
 
 适用：需求不清、设计争议、用户反馈分裂、方案被否。
 
 ```text
-xuanlan-mirror -> heart-knot-diagnosis -> wuzhu-action -> closure-review
+xuanlan-mirror -> heart-knot-diagnosis -> wuzhu-action -> engineering-execution -> closure-review
 ```
 
 交接：
 - 明镜区分用户事实、团队观点和指标信号。
 - 心结诊断识别被触动的是能力、审美、控制还是沉没成本。
-- 无住行动产出低保真原型、试验稿或小范围验证。
+- 无住行动确定低保真原型、试验稿或小范围验证。
+- 工程执行完成可反馈版本和验证方式。
 - 闭环记录反馈和下一轮原则。
 
 终止条件：完成一个可反馈版本，而不是继续争论抽象偏好。
 
-## Workflow 3：范围取舍通达
+## Workflow 4：范围取舍通达
 
 适用：赶期、砍需求、重构与交付冲突、是否接额外任务。
 
 ```text
-control-boundary -> benxin-decision -> hanli-long-game
+control-boundary -> benxin-decision -> hanli-long-game -> engineering-execution
 ```
 
 交接：
 - 可控边界区分控制圈、影响圈、观察圈。
 - 本心决断选择范围、代价和验证信号。
 - 韩立长线检查后路、证据和复利。
+- 工程执行产出同步话术、范围变更、文档或代码调整。
 
 终止条件：有一个可承担的取舍和明确同步话术。
 
-## Workflow 4：内耗止损通达
+## Workflow 5：内耗止损通达
 
 适用：反复想、羞耻、愧疚、后悔、被评审卡住。
 
@@ -70,19 +88,20 @@ heart-knot-diagnosis -> control-boundary -> closure-review
 
 终止条件：用户或 agent 有一个可控动作和停止规则。
 
-## Workflow 5：长线项目通达
+## Workflow 6：长线项目通达
 
 适用：长期项目、创业、研究、写书、复杂学习、技能建设。
 
 ```text
-xuanlan-mirror -> benxin-decision -> hanli-long-game -> wuzhu-action -> closure-review
+xuanlan-mirror -> benxin-decision -> hanli-long-game -> wuzhu-action -> engineering-execution -> closure-review
 ```
 
 交接：
 - 明镜看清现实。
 - 本心决断确定阶段目标。
 - 韩立长线保护复利和后路。
-- 无住行动交付最小增量。
+- 无住行动确定最小增量。
+- 工程执行交付最小增量并验证。
 - 闭环沉淀下轮原则。
 
 终止条件：阶段目标、下一步、复查点和收念规则都明确。
@@ -93,6 +112,7 @@ xuanlan-mirror -> benxin-decision -> hanli-long-game -> wuzhu-action -> closure-
 - 外部依赖卡住：插入 `control-boundary`。
 - 方案执著：插入 `wuzhu-action`。
 - 反复失败：插入 `pojing-breakthrough`。
+- 停在计划：插入 `engineering-execution`。
 - 情绪上头：插入 `hanli-long-game`。
 - 已行动但心不收：插入 `closure-review`。
 

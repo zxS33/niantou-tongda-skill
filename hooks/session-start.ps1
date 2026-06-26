@@ -57,7 +57,7 @@ if (-not (Test-Path -LiteralPath $skillPath)) {
 $content = Get-Content -LiteralPath $skillPath -Raw -Encoding UTF8
 $sessionContext = @"
 <NIANTOU_TONGDA_SKILL>
-已加载 niantou-tongda。请先遵守用户指令、项目约束和宿主平台规则，再在明确适用时把这份方法论作为事实澄明、决断、行动、破境与收念的补充框架。
+已加载 niantou-tongda。请先遵守用户指令、项目约束和宿主平台规则，再在明确适用时把这份方法论作为事实澄明、决断、行动、工程交付、破境与收念的补充框架。
 
 $content
 
