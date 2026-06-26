@@ -1,0 +1,4 @@
+interface:
+  display_name: "可控边界"
+  short_description: "区分可控可影响不可控并把外部卡点转成可执行下一步动作"
+  default_prompt: "Use $control-boundary to separate what is controllable, influenceable, and only observable."

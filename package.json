@@ -1,0 +1,48 @@
+{
+  "name": "niantou-tongda-skill",
+  "version": "0.1.0",
+  "description": "把“念头通达”转化为 AI Agent 可执行的修心、决断与反内耗 Skills",
+  "author": "zxS33 <zx1467506288@outlook.com>",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "niantou-tongda-skill": "./bin/niantou-tongda-skill.mjs"
+  },
+  "scripts": {
+    "validate": "node ./bin/validate.mjs",
+    "test": "node --test tests/*.test.mjs && node ./bin/validate.mjs"
+  },
+  "files": [
+    "skills",
+    "commands",
+    "agents",
+    "hooks",
+    "assets",
+    ".claude-plugin",
+    ".cursor-plugin",
+    ".codex",
+    ".opencode",
+    ".openclaw",
+    ".hermes",
+    ".nanobot",
+    "docs",
+    "bin",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "keywords": [
+    "agent",
+    "skills",
+    "codex",
+    "methodology",
+    "anti-rumination",
+    "decision-making",
+    "software-engineering",
+    "productivity",
+    "chinese"
+  ]
+}

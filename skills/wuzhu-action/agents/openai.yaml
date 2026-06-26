@@ -1,0 +1,4 @@
+interface:
+  display_name: "无住行动"
+  short_description: "在不确定评价和不完美条件中持续交付价值导向行动并验证结果"
+  default_prompt: "Use $wuzhu-action to move forward without clinging to certainty, praise, or perfect conditions."

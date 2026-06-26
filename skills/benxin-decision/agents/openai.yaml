@@ -1,0 +1,4 @@
+interface:
+  display_name: "本心决断"
+  short_description: "按事实价值代价边界做一个心安且不反复的决定并落到下一步"
+  default_prompt: "Use $benxin-decision to choose the cleanest decision that leaves the user at peace."

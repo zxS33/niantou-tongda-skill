@@ -1,0 +1,4 @@
+interface:
+  display_name: "通达工作流"
+  short_description: "为纠结决断冲突复盘选择合适组合流程并定义步骤交接和完成条件"
+  default_prompt: "Use $tongda-workflows to select the right multi-step thought-to-action workflow."

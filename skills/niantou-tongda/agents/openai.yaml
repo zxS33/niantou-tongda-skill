@@ -1,0 +1,4 @@
+interface:
+  display_name: "念头通达"
+  short_description: "把纠结内耗拆成清醒判断心安选择和可执行下一步让智能体能够行动"
+  default_prompt: "Use $niantou-tongda to turn this tangled situation into a clear, values-aligned next action."

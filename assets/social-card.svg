@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">Niantou Tongda Skill Social Card</title>
+  <desc id="desc">Social preview card for Niantou Tongda Skill.</desc>
+  <rect width="1280" height="640" fill="#10231f"/>
+  <circle cx="220" cy="320" r="135" fill="none" stroke="#d7b56d" stroke-width="14"/>
+  <circle cx="220" cy="320" r="92" fill="none" stroke="#f7f3eb" stroke-width="8"/>
+  <path d="M160 324 C202 248 280 258 304 312 C268 298 234 312 210 342 C190 366 166 358 160 324Z" fill="#d7b56d"/>
+  <text x="410" y="282" font-family="Georgia, 'Times New Roman', serif" font-size="78" fill="#f7f3eb" font-weight="700">念头通达 Skill</text>
+  <text x="414" y="354" font-family="Arial, sans-serif" font-size="34" fill="#d7b56d">AI Agent 的工程心法与决断工作流</text>
+  <text x="416" y="412" font-family="Arial, sans-serif" font-size="25" fill="#c7d0ca">facts · boundaries · decisions · probes · closure</text>
+</svg>

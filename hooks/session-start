@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PLUGIN_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+SKILL_PATH="${PLUGIN_ROOT}/skills/niantou-tongda/SKILL.md"
+
+if [ ! -f "${SKILL_PATH}" ]; then
+  echo "Error: missing skill file at ${SKILL_PATH}" >&2
+  exit 1
+fi
+
+escape_for_json() {
+  local s="$1"
+  s="${s//\\/\\\\}"
+  s="${s//\"/\\\"}"
+  s="${s//$'\n'/\\n}"
+  s="${s//$'\r'/\\r}"
+  s="${s//$'\t'/\\t}"
+  printf '%s' "$s"
+}
+
+content="$(cat "${SKILL_PATH}")"
+escaped="$(escape_for_json "$content")"
+session_context="<NIANTOU_TONGDA_SKILL>\n已加载 niantou-tongda。请先遵守用户指令、项目约束和宿主平台规则，再在明确适用时把这份方法论作为事实澄明、决断、行动、破境与收念的补充框架。\n\n${escaped}\n\n</NIANTOU_TONGDA_SKILL>"
+
+if [ -n "${CLAUDE_PLUGIN_ROOT:-}" ]; then
+  printf '{\n  "hookSpecificOutput": {\n    "hookEventName": "SessionStart",\n    "additionalContext": "%s"\n  }\n}\n' "$session_context"
+else
+  printf '{\n  "additional_context": "%s"\n}\n' "$session_context"
+fi

@@ -1,0 +1,4 @@
+interface:
+  display_name: "收念闭环"
+  short_description: "在行动后复盘得失收束情绪停止反复内耗并沉淀下次原则"
+  default_prompt: "Use $closure-review to close the loop after an action, conflict, rejection, or failure."

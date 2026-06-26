@@ -1,0 +1,4 @@
+interface:
+  display_name: "破境攻关"
+  short_description: "遇到顽固瓶颈时设计最小探针突破卡点并沉淀新认识进入下一轮"
+  default_prompt: "Use $pojing-breakthrough to turn a stubborn bottleneck into a minimal probe and breakthrough plan."

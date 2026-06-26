@@ -1,0 +1,4 @@
+interface:
+  display_name: "玄览明镜"
+  short_description: "把事实信号假设脑补分开为调试设计判断和项目推进清障"
+  default_prompt: "Use $xuanlan-mirror to separate facts, signals, assumptions, and stories before acting."
